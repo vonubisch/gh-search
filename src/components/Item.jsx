@@ -2,11 +2,11 @@ import PropTypes from 'prop-types'
 
 const Item = ({ image, title, description, stars }) => {
   return (
-    <div>
+    <div className="item">
       <img src={image} alt={title} width={16} height={16} />
       <h3>{title}</h3>
       <p>{description}</p>
-      <span>{stars} stars</span>
+      <span><i>★</i> {stars}</span>
     </div>
   )
 }

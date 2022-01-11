@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 const Pagination = ({ current, total }) => {
   return (
-    <div>
+    <div className="pagination">
       {current} of {total}
     </div>
   )

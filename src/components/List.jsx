@@ -3,18 +3,17 @@ import Item from './Item'
 
 const List = ({ items }) => {
   return (
-    <ol>
-      <li>
-        {items.map((e) => (
+    <ol className="list">
+      {items.map((e) => (
+        <li key={e.id}>
           <Item 
-            key={e.title} 
-            title={e.title} 
-            image={e.image} 
+            title={e.name} 
+            image={e.owner.avatar_url} 
             description={e.description} 
-            stars={e.stars}
+            stars={e.stargazers_count}
           />
-        ))}
-      </li>
+        </li>
+      ))}
     </ol>
   )
 }
